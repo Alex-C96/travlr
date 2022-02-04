@@ -8,7 +8,7 @@ const readLine = require('readline');
 //mongoose.set('useNewUrlParser', true);
 
 const connect = () => {
-    setTimeout(() => monmgoose.connect(dbURI, {
+    setTimeout(() => mongoose.connect(dbURI, {
         useNewUrlParser: true,
         useCreateIndex: true
     }), 1000);
@@ -62,4 +62,4 @@ mongoose.connection.on('connected', () => {
   
   connect();
   
-  require('./travlr');
+  require('./models/travlr');
